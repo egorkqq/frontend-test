@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Layout } from 'antd';
 import Sidebar from './Sidebar';
 import { default as HeaderComponent } from './Header';
@@ -20,4 +20,4 @@ const AppLayout = (props) => {
   );
 };
 
-export default AppLayout;
+export default memo(AppLayout);

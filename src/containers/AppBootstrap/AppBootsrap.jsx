@@ -10,7 +10,7 @@ const AppBootsrap = (props) => {
   const dispatch = useDispatch();
 
   const loading = false;
-  const signedIn = true;
+  const signedIn = false;
 
   useEffect(() => {
     dispatch(bootstrap());
