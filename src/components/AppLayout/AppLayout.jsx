@@ -14,7 +14,7 @@ const AppLayout = (props) => {
       <Sider className="AppLayout__Sidebar">{sider}</Sider>
       <Layout>
         <Header className="AppLayout__Header">{header}</Header>
-        <Content>{children}</Content>
+        <Content className="AppLayout__Content">{children}</Content>
       </Layout>
     </Layout>
   );
