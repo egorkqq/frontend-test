@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import AppLayout from '../../components/AppLayout/AppLayout';
 import { bootstrap } from './actions';
 import { Spin, Space } from 'antd';
 import Sign from './Sign';

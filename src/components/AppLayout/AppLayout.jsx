@@ -1,13 +1,11 @@
 import React, { memo } from 'react';
 import { Layout } from 'antd';
-import Sidebar from './Sidebar';
-import { default as HeaderComponent } from './Header';
 import './AppLayout.sass';
 
 const { Header, Sider, Content } = Layout;
 
 const AppLayout = (props) => {
-  const { sider = <Sidebar />, header = <HeaderComponent />, children } = props;
+  const { sider, header, children } = props;
 
   return (
     <Layout>

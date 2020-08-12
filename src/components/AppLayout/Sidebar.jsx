@@ -5,14 +5,16 @@ import logo from '../../assets/mimc-logo-small.png';
 
 const { SubMenu } = Menu;
 
-const Sidebar = () => {
+const Sidebar = (props) => {
+  const { current } = props;
+
   return (
     <>
       <img className="AppLayout__SidebarLogo" alt="MIMC" src={logo} />
       <Menu
         className="AppLayout__SidebarMenu"
         mode="inline"
-        defaultSelectedKeys={['4']}
+        selectedKeys={[current]}
       >
         <Menu.Item
           className="AppLayout__SidebarMenuItem"
@@ -21,6 +23,7 @@ const Sidebar = () => {
           Задачи и работы
         </Menu.Item>
         <Menu.Item
+          key="/projects"
           className="AppLayout__SidebarMenuItem"
           icon={<AppstoreOutlined />}
         >
