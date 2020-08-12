@@ -3,13 +3,6 @@ import createSagaMiddleware from 'redux-saga';
 import createRootReducer from './createRootReducer';
 import rootSaga from './rootSaga';
 
-const logMiddleware = ({ getState }) => (next) => (action) => {
-  // eslint-disable-next-line no-console
-  if (process.env.NODE_ENV === 'development')
-    console.log(action.type, getState());
-  return next(action);
-};
-
 const configureStore = (
   initialState,
   additionalMiddlewares = [],
@@ -17,7 +10,7 @@ const configureStore = (
 ) => {
   const sagaMiddleware = createSagaMiddleware();
 
-  const middlewares = [sagaMiddleware, logMiddleware, ...additionalMiddlewares];
+  const middlewares = [sagaMiddleware, ...additionalMiddlewares];
 
   const enhancers = [applyMiddleware(...middlewares)];
 

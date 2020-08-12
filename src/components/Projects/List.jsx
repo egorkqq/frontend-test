@@ -8,7 +8,7 @@ const List = (props) => {
 
   const onClick = useCallback(() => {
     setModalOpened(true);
-  }, [modalOpened]);
+  }, [setModalOpened]);
 
   return (
     <>
