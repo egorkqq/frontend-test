@@ -29,7 +29,7 @@ const SignIn = (props) => {
           )}
           <div className="SignIn__Field">
             <span>Логин</span>
-            <Input value={login} onChange={onChangeLogin} placeholder="Логин" />
+            <Input autoFocus value={login} onChange={onChangeLogin} placeholder="Логин" />
           </div>
           <div className="SignIn__Field">
             <span>Пароль</span>
