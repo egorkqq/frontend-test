@@ -17,7 +17,7 @@ function* bootstrap() {
   yield put(bootstrapDone());
 }
 
-function* login({ payload }) {
+function* loginHandler({ payload }) {
   const { login, password } = payload;
   yield delay(1500);
 
@@ -35,7 +35,7 @@ function* login({ payload }) {
   yield put(signInError());
 }
 
-function* exit() {
+function* exitHandler() {
   yield localStorage.setItem('login', null);
   yield localStorage.setItem('password', null);
 }
@@ -43,7 +43,7 @@ function* exit() {
 export default function* appBootstrapSaga() {
   yield all([
     takeLatest(BOOTSTRAP, bootstrap),
-    takeLatest(LOGIN, login),
-    takeLatest(EXIT, exit),
+    takeLatest(LOGIN, loginHandler),
+    takeLatest(EXIT, exitHandler),
   ]);
 }

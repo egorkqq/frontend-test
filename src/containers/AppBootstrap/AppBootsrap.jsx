@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { bootstrap } from './actions';
-import { Spin, Space } from 'antd';
 import Sign from './Sign';
 import RenderAuthorized from './RenderAuthorized';
 import { loadingSelector, signedInSelector } from './selectors';
 import Loader from '../../components/Loader/Loader';
 
-const AppBootsrap = (props) => {
+const AppBootsrap = () => {
   const dispatch = useDispatch();
 
   const loading = useSelector(loadingSelector);

@@ -14,7 +14,7 @@ const Card = () => {
     <AntCard
       className="Projects__Card"
       style={{ width: 300 }}
-      cover={
+      cover={(
         <div className="Projects__CardCover">
           <Tag className="Projects__CategoryTag" color="#fff">
             #f50
@@ -27,21 +27,27 @@ const Card = () => {
             src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
           />
         </div>
-      }
+      )}
     >
       <Meta
         title="Терапевтический корпус"
-        description={
+        description={(
           <div>
             <div className="Projects__CardInfo">
               <div>
-                <CalendarOutlined /> 08.04.3030 -- 09.30.3030 yy.
+                <CalendarOutlined />
+                {' '}
+                08.04.3030 -- 09.30.3030 yy.
               </div>
               <div>
-                <UserOutlined /> Dan Konev
+                <UserOutlined />
+                {' '}
+                Dan Konev
               </div>
               <div>
-                <EuroOutlined /> Grosslim LLC
+                <EuroOutlined />
+                {' '}
+                Grosslim LLC
               </div>
             </div>
             <div className="Projects__ListWrapper">
@@ -69,7 +75,7 @@ const Card = () => {
               />
             </div>
           </div>
-        }
+        )}
       />
     </AntCard>
   );

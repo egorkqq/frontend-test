@@ -1,13 +1,13 @@
 import React, { useCallback } from 'react';
-import { Redirect, Route, Switch, useLocation } from 'react-router';
+import { Redirect, Route, Switch, useLocation } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import AppLayout from '../../components/AppLayout/AppLayout';
 import Sidebar from '../../components/AppLayout/Sidebar';
 import Header from '../../components/AppLayout/Header';
 import Projects from '../Projects/Projects';
-import { useDispatch } from 'react-redux';
 import { exit } from './actions';
 
-const RenderAuthorized = (props) => {
+const RenderAuthorized = () => {
   const dispatch = useDispatch();
   const location = useLocation();
 

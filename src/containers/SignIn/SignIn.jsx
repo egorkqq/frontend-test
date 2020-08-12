@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { signIn } from '../AppBootstrap/actions';
-import { default as SignInComponent } from '../../components/SignIn/SignIn';
+import SignInComponent from '../../components/SignIn/SignIn';
 import { loginErrorSelector } from '../AppBootstrap/selectors';
 
 const SignIn = () => {

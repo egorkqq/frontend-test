@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { default as ProjectsComponent } from '../../components/Projects/Projects';
+import ProjectsComponent from '../../components/Projects/Projects';
 
 const Projects = () => {
   const [modalOpened, setModalOpened] = useState(false);
