@@ -9,7 +9,18 @@ import {
 
 const { Meta } = AntCard;
 
-const Card = () => {
+const Card = (props) => {
+  const {
+    image,
+    category,
+    status,
+    title,
+    dates,
+    owner,
+    administrator,
+    progress,
+  } = props;
+
   return (
     <AntCard
       className="Projects__Card"
@@ -17,37 +28,34 @@ const Card = () => {
       cover={(
         <div className="Projects__CardCover">
           <Tag className="Projects__CategoryTag" color="#fff">
-            #f50
+            {category}
           </Tag>
           <Tag className="Projects__StatusTag" color="#f50">
-            #f50
+            {status}
           </Tag>
-          <img
-            alt="example"
-            src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-          />
+          <img alt="example" src={image} />
         </div>
       )}
     >
       <Meta
-        title="Терапевтический корпус"
+        title={title}
         description={(
           <div>
             <div className="Projects__CardInfo">
               <div>
-                <CalendarOutlined />
+                <CalendarOutlined /> 
                 {' '}
-                08.04.3030 -- 09.30.3030 yy.
+                {dates}
               </div>
               <div>
-                <UserOutlined />
+                <UserOutlined /> 
                 {' '}
-                Dan Konev
+                {owner}
               </div>
               <div>
                 <EuroOutlined />
                 {' '}
-                Grosslim LLC
+                {administrator}
               </div>
             </div>
             <div className="Projects__ListWrapper">
@@ -68,7 +76,7 @@ const Card = () => {
               <Progress
                 showInfo={false}
                 type="circle"
-                percent={75}
+                percent={progress}
                 width={28}
                 strokeWidth={16}
                 strokeColor="17d000"

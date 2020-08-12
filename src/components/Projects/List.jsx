@@ -4,7 +4,7 @@ import Card from './Card';
 import ProjectModal from '../ProjectModal/ProjectModal';
 
 const List = (props) => {
-  const { modalOpened, setModalOpened } = props;
+  const { modalOpened, setModalOpened, projects } = props;
 
   const onClick = useCallback(() => {
     setModalOpened(true);
@@ -25,8 +25,23 @@ const List = (props) => {
         <ProjectModal setVisible={setModalOpened} visible={modalOpened} />
       </div>
       <div className="Projects__Cards">
-        <Card />
-        <Card />
+        {Object.keys(projects).map((key) => {
+          const project = projects[key];
+
+          return (
+            <Card
+              key={key}
+              title={project.title}
+              image={project.image}
+              category={project.category}
+              status={project.status}
+              dates={project.dates}
+              owner={project.owner}
+              administrator={project.administrator}
+              progress={project.progress}
+            />
+          );
+        })}
       </div>
     </>
   );

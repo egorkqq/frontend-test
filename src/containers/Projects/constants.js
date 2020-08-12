@@ -1,0 +1,10 @@
+export const STORE_SLICE_NAME = 'projects';
+
+const PREFIX = `${STORE_SLICE_NAME}`;
+
+export const BOOTSTRAP = `${PREFIX}/BOOTSTRAP`;
+export const BOOTSTRAP_DONE = `${PREFIX}/BOOTSTRAP_DONE`;
+
+export const GET_PROJECTS = `${PREFIX}/GET_PROJECTS`;
+export const GET_PROJECTS_SUCCESS = `${PREFIX}/GET_PROJECTS_SUCCESS`;
+export const GET_PROJECTS_ERROR = `${PREFIX}/GET_PROJECTS_ERROR`;
