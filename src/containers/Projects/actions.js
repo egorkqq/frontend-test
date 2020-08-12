@@ -4,6 +4,7 @@ import {
   GET_PROJECTS,
   GET_PROJECTS_SUCCESS,
   GET_PROJECTS_ERROR,
+  ADD_PROJECT,
 } from './constants';
 
 export const bootstrap = () => ({
@@ -27,4 +28,9 @@ export const fetchProjectsSuccess = () => ({
 
 export const fetchProjectsError = () => ({
   type: GET_PROJECTS_ERROR,
+});
+
+export const addProject = (data) => ({
+  type: ADD_PROJECT,
+  payload: data,
 });

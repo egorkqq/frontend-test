@@ -22,7 +22,13 @@ export default (state = initialState, action) =>
 
       case types.BOOTSTRAP_DONE: {
         draft.loading = false;
-        draft.list = payload;
+        draft.list = Object.keys(payload).map((key) => payload[key]);
+
+        break;
+      }
+
+      case types.ADD_PROJECT: {
+        draft.list.push(payload);
 
         break;
       }

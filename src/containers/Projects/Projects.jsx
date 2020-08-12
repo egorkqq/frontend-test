@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ProjectsComponent from '../../components/Projects/Projects';
-import { bootstrap } from './actions';
+import { bootstrap, addProject } from './actions';
 import { loadingSelector, listSelector } from './selectors';
 
 const Projects = () => {
@@ -16,12 +16,20 @@ const Projects = () => {
     dispatch(bootstrap());
   }, [dispatch]);
 
+  const onSubmitProject = useCallback(
+    (data) => {
+      dispatch(addProject(data));
+    },
+    [dispatch]
+  );
+
   return (
     <ProjectsComponent
       setModalOpened={setModalOpened}
       modalOpened={modalOpened}
       loading={loading}
       projects={projects}
+      onSubmitProject={onSubmitProject}
     />
   );
 };

@@ -33,7 +33,7 @@ const Card = (props) => {
           <Tag className="Projects__StatusTag" color="#f50">
             {status}
           </Tag>
-          <img alt="example" src={image} />
+          <img alt={title} src={image} />
         </div>
       )}
     >
@@ -53,7 +53,7 @@ const Card = (props) => {
                 {owner}
               </div>
               <div>
-                <EuroOutlined />
+                <EuroOutlined /> 
                 {' '}
                 {administrator}
               </div>

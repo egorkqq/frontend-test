@@ -8,7 +8,13 @@ import Loader from '../Loader/Loader';
 const { TabPane } = Tabs;
 
 const Projects = (props) => {
-  const { modalOpened, setModalOpened, loading, projects } = props;
+  const {
+    modalOpened,
+    setModalOpened,
+    loading,
+    projects,
+    onSubmitProject,
+  } = props;
 
   if (loading) {
     return <Loader />;
@@ -23,6 +29,7 @@ const Projects = (props) => {
             projects={projects}
             modalOpened={modalOpened}
             setModalOpened={setModalOpened}
+            onSubmitProject={onSubmitProject}
           />
         </TabPane>
         <TabPane
