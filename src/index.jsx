@@ -10,7 +10,7 @@ import 'antd/dist/antd.css';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter basename="/mimc">
+      <BrowserRouter>
         <App />
       </BrowserRouter>
     </Provider>

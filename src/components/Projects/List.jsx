@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
 import Card from './Card';
+import ProjectModal from '../ProjectModal/ProjectModal';
 
 const List = () => {
   return (
@@ -10,6 +11,7 @@ const List = () => {
         <Button className="Projects__Button" type="primary" size="large">
           Добавить проект
         </Button>
+        <ProjectModal />
       </div>
       <div className="Projects__Cards">
         <Card />
